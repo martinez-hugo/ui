@@ -97,11 +97,9 @@ export function ThemeCustomizer() {
                         )}
                         style={
                           {
-                            "--theme-primary": `hsl(${
-                              theme?.activeColor[
-                                mode === "dark" ? "dark" : "light"
-                              ]
-                            })`,
+                            "--theme-primary": `hsl(${theme?.activeColor[
+                              mode === "dark" ? "dark" : "light"
+                            ]})`,
                           } as React.CSSProperties
                         }
                       >
@@ -277,9 +275,9 @@ function Customizer() {
                   )}
                   style={
                     {
-                      "--theme-primary": `hsl(${
-                        theme?.activeColor[mode === "dark" ? "dark" : "light"]
-                      })`,
+                      "--theme-primary": `hsl(${theme?.activeColor[
+                        mode === "dark" ? "dark" : "light"
+                      ]})`,
                     } as React.CSSProperties
                   }
                 >
