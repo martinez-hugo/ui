@@ -31,7 +31,11 @@ import {
   TabsTrigger,
 } from "@/registry/new-york/ui/tabs"
 import { TooltipProvider } from "@/registry/new-york/ui/tooltip"
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/registry/new-york/ui/resizable"
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/registry/new-york/ui/resizable"
 
 interface MailProps {
   accounts: {
@@ -78,9 +82,17 @@ export function Mail({
               collapsed
             )}`
           }}
-          className={cn(isCollapsed && "min-w-[50px] transition-all duration-300 ease-in-out")}
+          className={cn(
+            isCollapsed &&
+              "min-w-[50px] transition-all duration-300 ease-in-out"
+          )}
         >
-          <div className={cn("flex h-[52px] items-center justify-center", isCollapsed ? 'h-[52px]': 'px-2')}>
+          <div
+            className={cn(
+              "flex h-[52px] items-center justify-center",
+              isCollapsed ? "h-[52px]" : "px-2"
+            )}
+          >
             <AccountSwitcher isCollapsed={isCollapsed} accounts={accounts} />
           </div>
           <Separator />
@@ -168,8 +180,18 @@ export function Mail({
             <div className="flex items-center px-4 py-2">
               <h1 className="text-xl font-bold">Inbox</h1>
               <TabsList className="ml-auto">
-                <TabsTrigger value="all" className="text-zinc-600 dark:text-zinc-200">All mail</TabsTrigger>
-                <TabsTrigger value="unread" className="text-zinc-600 dark:text-zinc-200">Unread</TabsTrigger>
+                <TabsTrigger
+                  value="all"
+                  className="text-zinc-600 dark:text-zinc-200"
+                >
+                  All mail
+                </TabsTrigger>
+                <TabsTrigger
+                  value="unread"
+                  className="text-zinc-600 dark:text-zinc-200"
+                >
+                  Unread
+                </TabsTrigger>
               </TabsList>
             </div>
             <Separator />
